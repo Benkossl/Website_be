@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #FEFF9E;
+		background: #f4f7fb;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -125,7 +125,7 @@ input, select, textarea {
 
 		h2.major {
 			position: relative;
-			border-top: solid 5px #C29670;
+			border-top: solid 5px #1d4d75;
 			font-size: 1.65em;
 			text-align: center;
 			margin: 0 0 3em 0;
@@ -2309,14 +2309,14 @@ input, select, textarea {
 		font-weight: 700;
 		text-transform: uppercase;
 		padding: 2em 0;
-		background: #fff;
+		background: #ffffff;
 		margin: 0 auto;
 	}
 
 		#header .logo {
 			position: relative;
 			text-align: center;
-			border-top: solid 5px #C29670;
+			border-top: solid 5px #1d4d75;
 			top: 0.65em;
 		}
 
@@ -2334,7 +2334,7 @@ input, select, textarea {
 
 			#header .logo p {
 				display: inline;
-				color: #C29670;
+				color: #d1985b;
 			}
 
 /* Nav */
@@ -2417,17 +2417,17 @@ input, select, textarea {
 			}
 
 			#nav li:hover a, #nav li:hover span {
-				background: #C29670;
+				background: #d1985b;
 				color: #fff;
 			}
 
 			#nav li.active a, #nav li.active span {
-					background: #C29670;
+					background: #d1985b;
 				color: #fff;
 			}
 
 			#nav li.current a {
-				background: #63B8FF;
+				background: #1d4d75;
 				color: #fff;
 			}
 
@@ -2555,8 +2555,8 @@ input, select, textarea {
 
 	#main {
 		background: #fff;
-		border-top: solid 5px #63B8FF;
-		border-bottom: solid 5px #C29670;
+		border-top: solid 5px #1d4d75;
+		border-bottom: solid 5px #d1985b;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
 		padding: 6em 0 6em 0;
@@ -2578,6 +2578,7 @@ input, select, textarea {
 	#footer {
 		text-align: center;
 		padding: 8em 0 8em 0;
+		background: #eef4fa;
 	}
 
 		#footer a {
@@ -2589,17 +2590,17 @@ input, select, textarea {
 		}
 
 			#footer h2.major span {
-					background: #FEFF9E;
+					background: #eef4fa;
 			}
 
 /* Copyright */
 
 	#copyright {
 		display: inline-block;
-		background: #C29670;
+		background: #1d4d75;
 		padding: 0.75em 2em 0.75em 2em;
 		border-radius: 8px;
-		color: #8b9790;
+		color: #eef4fa;
 		margin: 4em 0 0 0;
 	}
 
