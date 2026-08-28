@@ -120,14 +120,22 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
 	.product-scroll-animation {
-		margin-left: -1em;
-		margin-right: -1em;
+		margin-left: calc((100% - 100vw) / 2);
+		margin-right: calc((100% - 100vw) / 2);
+		width: 100vw;
 	}
 
 	.product-scroll-animation__caption {
 		bottom: 2em;
 		left: 1.5em;
 		right: 1.5em;
+	}
+
+	.product-scroll-animation canvas {
+		height: auto;
+		object-fit: contain;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 
