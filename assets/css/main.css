@@ -74,6 +74,63 @@ input, select, textarea {
 
 /* Basic */
 
+.product-scroll-animation {
+	height: 500vh;
+	margin: 5em -2em;
+	position: relative;
+}
+
+.product-scroll-animation__sticky {
+	background: #101820;
+	height: 100vh;
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+}
+
+.product-scroll-animation canvas {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.product-scroll-animation__caption {
+	bottom: 3em;
+	color: #fff;
+	left: 3em;
+	max-width: 28em;
+	position: absolute;
+	z-index: 1;
+}
+
+.product-scroll-animation__caption h2,
+.product-scroll-animation__caption p {
+	background: rgba(16, 24, 32, 0.82);
+	display: table;
+	margin: 0;
+	padding: 0.35em 0.6em;
+}
+
+.product-scroll-animation__caption p {
+	margin-top: 0.5em;
+}
+
+@media screen and (max-width: 736px) {
+	.product-scroll-animation {
+		margin-left: -1em;
+		margin-right: -1em;
+	}
+
+	.product-scroll-animation__caption {
+		bottom: 2em;
+		left: 1.5em;
+		right: 1.5em;
+	}
+}
+
 	html {
 		box-sizing: border-box;
 	}
