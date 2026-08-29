@@ -9,7 +9,7 @@
 
 	var canvas = sequence.querySelector('canvas');
 	var context = canvas.getContext('2d');
-	var frameCount = 94;
+	var frameCount = 91;
 	var frames = [];
 	var currentFrame = -1;
 	var frameRequest = null;
@@ -38,9 +38,19 @@
 	function updateFrame() {
 		frameRequest = null;
 
+		var isMobile = window.matchMedia('(max-width: 736px)').matches;
 		var bounds = sequence.getBoundingClientRect();
-		var scrollDistance = bounds.height - window.innerHeight;
-		var progress = scrollDistance > 0 ? -bounds.top / scrollDistance : 0;
+		var scrollDistance = Math.max(1, bounds.height - window.innerHeight);
+		var progress = 0;
+
+		if (isMobile) {
+			var sectionTop = sequence.offsetTop;
+			var scrollProgress = (window.pageYOffset - sectionTop) / Math.max(1, sequence.offsetHeight - window.innerHeight);
+			progress = Math.max(0, Math.min(1, scrollProgress));
+		} else {
+			progress = scrollDistance > 0 ? -bounds.top / scrollDistance : 0;
+		}
+
 		var frameIndex = Math.max(0, Math.min(frameCount - 1, Math.floor(progress * frameCount)));
 
 		if (frameIndex !== currentFrame) {
@@ -56,7 +66,7 @@
 
 	for (var index = 0; index < frameCount; index += 1) {
 		frames[index] = new Image();
-		frames[index].src = framePath(index + 1);
+		frames[index].src = framePath(index + 1+3);
 		frames[index].addEventListener('load', function () {
 			if (currentFrame === -1) {
 				drawFrame(0);
@@ -66,5 +76,6 @@
 
 	window.addEventListener('scroll', requestFrameUpdate, { passive: true });
 	window.addEventListener('resize', requestFrameUpdate, { passive: true });
+	window.addEventListener('orientationchange', requestFrameUpdate, { passive: true });
 	requestFrameUpdate();
 }());
